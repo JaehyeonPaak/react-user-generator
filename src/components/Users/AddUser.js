@@ -18,8 +18,10 @@ const AddUser = (props) => {
             return;
         }
 
-        setEnteredUserName((prev) => '');
-        setEnteredAge((prev) => '');
+        props.onAddUser(enteredUserName, enteredAge);
+
+        setEnteredUserName('');
+        setEnteredAge('');
     };
 
     const usernameChangeHandler = (e) => {
